@@ -6,13 +6,15 @@
 </head>
 <body bgcolor="LightGreen">
     <script>
-        function ChangeButton()
+        function SetText(id, text)
         {
-            element = document.getElementById('1145')
-            element.onclick = "alert('welcome')"
+            element = document.getElementById(id)
+            element.innerHTML=text
         }
     </script>
-    <h1>KLPIG</h1>
-    <button id='1145' type="button" onclick="ChangeButton()">Login</button>
+    <h1>KL</h1>
+    <p>A </p>
+    <p id="adj" onmouseover="SetText('adj', 'smart')" onmouseleave="SetText('adj', 'dumb')">dumb</p>
+    <p> coder.</p>
 </body>
 </html>
