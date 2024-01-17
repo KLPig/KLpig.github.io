@@ -5,7 +5,14 @@
     <title>klpig.github.io</title>
 </head>
 <body bgcolor="LightGreen">
+    <script>
+        function ChangeButton()
+        {
+            element = document.getElementById('1145')
+            element.onclick = "alert('welcome')"
+        }
+    </script>
     <h1>KLPIG</h1>
-    <button type="button" onclick="alert('welcome')">Login</button>
+    <button id='1145' type="button" onclick="ChangeButton()">Login</button>
 </body>
 </html>
