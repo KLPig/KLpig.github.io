@@ -4,8 +4,17 @@
     <title>Welcome</title>
 </head>
 <body bgcolor="black">
+    <script src="code_handler.js">
+    </script>
     <div style="color:white;font-family:papyrus">
         <h1>Welcome</h1>
+        <br>
+        Input a code:
+        <input type="text" id="code">
+        <br>
+        <br>
+        <a id="url" onmouseover="handle_code()"
+           onmouseleave="remove_code()">Lets go!</a>
     </div>
 </body>
 </html>
