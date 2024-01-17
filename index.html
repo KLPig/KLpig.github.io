@@ -2,10 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>klpig.github.io</title>
+    <title>kl github page</title>
 </head>
-<body bgcolor="LightGreen">
-    <h1>KLPIG</h1>
-    <a href="form.html">Login the website</a>
+<body bgcolor="Black">
+    <script>
+        function SetText(id, text)
+        {
+            element = document.getElementById(id)
+            element.innerHTML=text
+        }
+    </script>
+    <div style="color:white;font-family:papyrus">
+        <h1>KL</h1>
+        <b id="adj" onmouseover="SetText('adj', 'A smart')"
+           onmouseleave="SetText('adj', 'An idk')"
+            onmousedown="SetText('adj', 'An intelligent')">An idk</b>
+        man.
+
+    </div>
+
 </body>
 </html>
