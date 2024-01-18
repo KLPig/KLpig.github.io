@@ -3,18 +3,25 @@
 <head>
     <title>Welcome</title>
 </head>
-<body bgcolor="black">
+<body style="background-color: black;">
     <script src="code_handler.js">
     </script>
-    <div style="color:white;font-family:papyrus">
-        <h1>Welcome</h1>
-        <br>
+    <div id="container" style="width: 500px;">
+    <div id="header" style="background-color: black">
+        <h1 style="color: aliceblue;font-family: papyrus">Welcome</h1>
+    </div>
+    <div id="menu" style="width:100px;height:500px;background-color:rgb(92, 92, 92);font-family:'papyrus'">
+        <h2>Content</h2>
+        <a href="secrets/never_gonna_give_you_up.html">A good thing</a>
+    </div>
+    
+
+    <div id="content" style="width:400px;height:500px;color:white;font-family:papyrus;background-color: black;float:left">
         Input a code:
         <input type="text" id="code">
         <br>
-        <br>
-        <a id="url" onmouseover="handle_code()"
-           onmouseleave="remove_code()">Lets go!</a>
+        <a id="url" onmouseover="handle_code()">Lets go!</a>
+    </div>
     </div>
 </body>
 </html>
