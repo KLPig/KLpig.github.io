@@ -7,6 +7,8 @@ function handle_code(){
         url.href = 'secrets/never_gonna_give_you_up.html'
     else if(element.value == 'SPECIAL-SECRET')
         url.href = 'secrets/SECRET.html'
+    else if(element.value == 'ULB')
+        url.href = 'downloads/ulb.png'
     else
         url.href = 'https://klpig.github.io'
 }
