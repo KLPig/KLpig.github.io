@@ -1,0 +1,8 @@
+a{
+    color:darkslategray;
+    background-color: lightcyan;
+}
+a:hover{
+    color:darkslategray;
+    background-color: rgb(181, 231, 231);
+}

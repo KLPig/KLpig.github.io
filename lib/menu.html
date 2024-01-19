@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="anchor-style.css">
+</head>
+<body style="background-color: darkcyan;">
+    <script src="code_handler.js">
+    </script>
+    <style>
+        div{
+            background-color: lightcyan;
+        }
+        div:hover{
+            background-color: rgb(183, 223, 223);;
+        }
+    </style>
+    <style>
+        a{
+            text-decoration:none;
+            font-size: larger;
+            color: darkslategray;
+        }
+        div{
+            overflow:auto;
+        }
+    </style>
+    <div id="menu" style="background-color:lightcyan;font-family:'papyrus';float:left;text-align: center;color: darkslategray">
+        <div class="moption" onclick="document.getElementById('main').src= href='/secrets/empty.html'">
+            <h1>HOME</h1>
+        </div>
+        <div class="moption" onclick="document.getElementById('main').src= href='/secrets/never_gonna_give_you_up.html'">
+            <h2>GOOD-THING</h2>
+            <p>Click in and get $1,919,810</p>
+        </div>
+        <div class="moption" onclick="document.getElementById('main').src= href='/secrets/SECRET.html'">
+            <h2>SPECIAL-SECRET</h2>
+            <p>I cannot tell you this secret.</p>
+        </div>
+        <div class="moption" onclick="document.getElementById('main').src= href='/secrets/SECRET.html'">
+            <h2>BAD TOM</h2>
+            <p>Sans: DO YOU WANNA HAVE A BAD TOM?</p>
+        </div>
+        <div class="moption" onclick="document.getElementById('main').src= href='https://klpig.github.io/downloads/ulb.png'">
+            <h2>ULB</h2>
+            <p>你游乐比大跌！</p>
+        </div>
+        <div class="moption" onclick="document.getElementById('main').src= href='/secrets/form.html'">
+            <h2>RZB</h2>
+            <p>Test if you are smart</p>
+        </div>
+    </div>
+    <script>
+        for(m in document.getElementsByClassName('moption')){
+            console.info(m.id);
+            m.onmouseclick = function(){
+                console.info('hello');
+                e = document.getElementById('main');
+                e.src = m.href;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <link rel="stylesheet" type="text/css" href="anchor-style.css">
+    </head>
+    <body>
+        <style>
+            div{
+                border-style: solid;
+                border-color: darkcyan;
+            }
+            label.subtitle, input.subtitle{
+                float: left;
+            }
+            #url
+            {
+                float: right;
+            }
+        </style>
+        <script src="code_handler.js">
+        </script>
+        <div id="title" style="height: 30px;background-color: darkcyan;color:lightblue;font-family: papyrus;">
+            <span class="title" style="font-size:x-large;">KL Website</span>
+        </div>
+        <div id="subtitle" style="background-color: lightcyan;color:darkslategray;font-family: papyrus;">
+            <span class="subtitle" for="text" style="text-align: left;">Search:</span>
+            <input id="code" class="subtitle" type="text" style="text-align: left;">
+            <a class="subtitle" id="url" style="text-align: right;" onclick="handle_code()">Ok</a>
+        </div>
+    </body>
+</html>
