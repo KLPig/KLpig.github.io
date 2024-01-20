@@ -1,11 +1,11 @@
 #title
 {
-    width: 100%;
+    width: 90%;
     height: 80px;
     border-style: groove;
     border-width: 5px;
     border-color: darkcyan;
-    padding: 1px;
+    padding: 10px;
     margin: 10px;
 }
 #menu
@@ -18,10 +18,10 @@
     padding: 1px;
     margin: 5px;
     float: left;
-
+}
 #main
 {
-    width: 75%;
+    width: 70%;
     height: 500px;
     border-style: solid;
     border-width: 5px;
@@ -32,12 +32,12 @@
 }
 #end
 {
-    width: 100%;
+    width: 90%;
     height: 50px;
     border-style: groove;
     border-width: 5px;
     border-color: darkcyan;
-    padding: 1px;
+    padding: 10px;
     margin: 10px;
     clear: both;
 }
