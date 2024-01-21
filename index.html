@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>kl github page</title>
+    <link rel="shortcut icon" href="icon.png">
+    <title>KL website</title>
+    <link rel="stylesheet" type="text/css" href="lib/anchor-style.css">
 </head>
-<body bgcolor="Black">
+<body style="background-color: lightcyan;">
     <script>
         function SetText(id, text)
         {
@@ -14,7 +16,7 @@
         function HandlePassword()
         {
             element = document.getElementById('pwd')
-            if(element.value == '20110412abc-KLpig123'){
+            if(element.value == 'KLpig123'){
                 SetText('in', 'Welcome, Admin')
                 document.getElementById('in').href = 'admin.html'
                 SetText('Notice', '')
@@ -27,7 +29,7 @@
             }
         }
     </script>
-    <div style="color:white;font-family:papyrus">
+    <div id="container" style="color:darkslategray;font-family:papyrus;font-size: xx-large;text-align: center;">
         <h1>KL</h1>
         <b id="adj" onmouseover="SetText('adj', 'A smart')"
            onmouseleave="SetText('adj', 'An idk')"
@@ -38,7 +40,7 @@
         <input type="password" id="pwd">
         <button onclick="HandlePassword()" style="font-family:papyrus">OK</button>
         <p id="Notice" style="color:red;font-family:papyrus"></p>
-        <a href="welcome.html" id="in" style="color:white;font-family:papyrus"></a>
+        <a href="welcome.html" id="in"></a>
     </div>
 
 </body>
