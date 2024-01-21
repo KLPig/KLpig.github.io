@@ -6,7 +6,7 @@
     <title>KL website</title>
     <link rel="stylesheet" type="text/css" href="lib/anchor-style.css">
 </head>
-<body style="background-color: lightcyan;">
+<body style="margin:0px;padding: 0px; background-image:url(bg.png);background-size: cover;">
     <script>
         function SetText(id, text)
         {
@@ -17,30 +17,67 @@
         {
             element = document.getElementById('pwd')
             if(element.value == 'KLpig123'){
-                SetText('in', 'Welcome, Admin')
-                document.getElementById('in').href = 'admin.html'
+                window.open('admin.html', '_self', '', true)
                 SetText('Notice', '')
             }else if(element.value == '1145114'){
-                SetText('in', 'Welcome')
+                window.open('welcome.html', '_self', '', true)
                 SetText('Notice', '')
             }else{
                 SetText('Notice', 'Password Incorrect')
-                SetText('in', '')
             }
         }
     </script>
-    <div id="container" style="color:darkslategray;font-family:papyrus;font-size: xx-large;text-align: center;">
-        <h1>KL</h1>
-        <b id="adj" onmouseover="SetText('adj', 'A smart')"
-           onmouseleave="SetText('adj', 'An idk')"
+    <style>
+        @keyframes toggle{
+            0%  {opacity: 0;width:20%;height: 500px}
+            70% {opacity: 0.2;width:100%;height: 500px}
+            90% {opacity: 1;width:100%;height: 600px}
+            100%{opacity: 1;width:100%;height: 600px}
+        }
+        @keyframes bgtoggle{
+            from{background-size: 100%;}
+            to{background-size: 120%;}
+        }
+        #login
+        {
+            color:darkslategray;
+            font-family:papyrus;
+            font-size: x-large;
+            text-align: center;height: 600px;
+            width:100%;
+            border: darkslategray 5px solid;
+            background-color: lightcyan;
+            opacity: 0;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <script>
+        function Toggle(){
+            document.getElementById('login').animation = 'toggle';
+            document.getElementsByTagName('body')[0].animation = 'bgtoggle';
+        }
+    </script>
+    <div id="container">
+        <div id="login" onmousemove="
+        document.getElementsByTagName('body')[0].style.animation = 'bgtoggle 5s';
+        document.getElementById('login').style.animation = 'toggle 5s';
+        setTimeout(function(){
+            document.getElementById('login').style.opacity=1;
+        }, 5000)">
+            <h1 class="logintext">KL</h1>
+            <b class="logintext" id="adj" onmouseover="SetText('adj', 'A smart')"
+            onmouseleave="SetText('adj', 'An idk')"
             onmousedown="SetText('adj', 'An intelligent')">An idk</b>
-        man.
-        <br><br>
-        Password:
-        <input type="password" id="pwd">
-        <button onclick="HandlePassword()" style="font-family:papyrus">OK</button>
-        <p id="Notice" style="color:red;font-family:papyrus"></p>
-        <a href="welcome.html" id="in"></a>
+            <b class="logintext">man.</b>
+            <br><br>
+            <label class="logintext" style:"font-size:large">Password:</label>
+            <br>
+            <input class="logintext" type="password" id="pwd" placeholder="Password...">
+            <br>
+            <button class="logintext" onclick="HandlePassword()" style="font-family:papyrus">OK</button>
+            <p id="Notice" style="color:red;font-family:papyrus"></p>
+        </div>
     </div>
 
 </body>

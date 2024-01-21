@@ -4,15 +4,20 @@
     <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="anchor-style.css">
 </head>
-<body style="background-color: darkcyan;">
+<body style="margin:0px;padding: 0px; background-color: darkcyan;">
     <script src="code_handler.js">
     </script>
     <style>
-        div{
-            background-color: lightcyan;
+        @keyframes change-color{
+            from{background-color: lightcyan;}
+            to{background-color: rgb(183, 223, 223);}
         }
         div:hover{
-            background-color: rgb(183, 223, 223);;
+            animation: change-color 0.5s;
+            background-color: rgb(183, 223, 223);
+        }
+        div{
+            background-color: lightcyan;
         }
     </style>
     <style>
@@ -25,7 +30,7 @@
             overflow:auto;
         }
     </style>
-    <div id="menu" style="background-color:lightcyan;font-family:'papyrus';float:left;text-align: center;color: darkslategray">
+    <div id="menu" style="background-color:lightcyan;font-family:'papyrus';float:left;text-align: center;color: darkslategray;width:96%;margin:2%">
         <div class="moption" onclick="openWindow('https://klpig.github.io/welcome.html')">
             <h1>HOME</h1>
         </div>
