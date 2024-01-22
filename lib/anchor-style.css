@@ -6,13 +6,15 @@ input[type=password]{
     font-family: papyrus;
     text-align: center;
 }
-input[type=text]{
-    width: 120px;
-    height: 30px;
-    border: 1px solid gainsboro;
-    border-radius: 2px;
+input[type=text].subtitle{
+    width: 80%;
+    height: 27px;
+    border-width: 0px;
+    margin-left: 10px;
     font-family: papyrus;
     text-align: center;
+    background-color: lightcyan;
+    border-radius: 0px;
 }
 button{
     width: 240px;
