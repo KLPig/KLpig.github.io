@@ -87,9 +87,7 @@ function gameEnd(){
 generateNo = -1;
 
 function createNewPillar(top, bottom){
-    console.log(top)
-    console.log(bottom)
-    Pillars[num] = new Pillar(num, top, bottom);
+    Pillars[num] = new Pillar(num, Math.floor(top), Math.ceil(bottom));
     num += 1;
 }
 
