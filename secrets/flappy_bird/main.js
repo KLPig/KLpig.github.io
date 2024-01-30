@@ -1,6 +1,8 @@
+var gameStart = 0;
+
 class Bird{
     constructor() {
-        this.y = 40;
+        this.y = 1;
         this.g = 0;
     }
     min(x, y){
@@ -26,6 +28,12 @@ class Bird{
         document.getElementById('bird').style.gridArea = this.y + ' / 6 / span 1 / span 1'
     }
     up(){
+        if(gameStart == 0) {
+            window.setInterval(mainUpdate, 100);
+            gameStart = 1;
+            document.getElementById('scorenotice').innerHTML = 'Score: '
+            return;
+        }
         this.g = this.max(this.g - 5, -2);
         this.y -= 5;
     }
@@ -67,8 +75,8 @@ class Pillar{
             this.x = -114;
         }else{
             this.x -= 1;
-            document.getElementById(this.id + 'up').style.gridArea = '1 / ' + this.x + ' / span ' + this.min(this.top / 10 * (100 - this.x), this.top) + ' / span 8'
-            document.getElementById(this.id + 'down').style.gridArea = this.bottom + this.max((100 - this.bottom) / 10 * (this.x - 90), 0) + ' / ' + this.x + ' / ' + 80 + ' / span 8'
+            document.getElementById(this.id + 'up').style.gridArea = '1 / ' + this.x + ' / span ' + this.min(Math.floor(this.top / 10 * (100 - this.x)), this.top) + ' / span 8'
+            document.getElementById(this.id + 'down').style.gridArea = this.bottom + this.max(Math.ceil((100 - this.bottom) / 10 * (this.x - 90)), 0) + ' / ' + this.x + ' / ' + 80 + ' / span 8'
         }
     }
 }
@@ -87,7 +95,9 @@ function gameEnd(){
 generateNo = -1;
 
 function createNewPillar(top, bottom){
-    Pillars[num] = new Pillar(num, Math.floor(top), Math.ceil(bottom));
+    console.log(top)
+    console.log(bottom)
+    Pillars[num] = new Pillar(num, top, bottom);
     num += 1;
 }
 
@@ -105,7 +115,7 @@ function mainUpdate(){
         borders = new Array('darkcyan', 'darkslateblue', 'darkred')
         document.getElementById('grid-container').style.backgroundColor = colors[tick / 300 % 3]
         document.getElementById('grid-container').style.borderColor = borders[tick / 300 % 3]
-        generateNo = (generateNo + 1) % 3;
+        generateNo += 1;
     }
     if(generateNo == 0){
         if(tick % 10 == 1 && tick % 100 < 80){
@@ -116,7 +126,18 @@ function mainUpdate(){
         else if(tick % 100 == 51) createNewPillar(50, 70);
     }else if(generateNo == 2){
         if(tick % 10 == 0)
-            createNewPillar(Math.abs(tick % 100 / 10 - 5) * 8 + 10, Math.abs(tick % 100 / 10 - 5) * 8 + 30)
+            createNewPillar(Math.abs(tick % 100 / 10 - 5) * 5 + 10, Math.abs(tick % 100 / 10 - 5) * 5 + 40)
+    }else if(generateNo <= 4){
+        if(Math.floor(tick / 100) % 2 == 0){
+            if(tick % 10 == 0 && tick % 100 <= 50)
+                createNewPillar(5 + tick % 100 / 2, 40);
+        }else{
+            if(tick % 10 == 0 && tick % 100 <= 50)
+                createNewPillar(30, tick % 100 / 2 + 40);
+        }
+    }else {
+        localStorage.instantScore = 3000;
+        gameEnd();
     }
     for(var i = 0; i < num; i++){
         Pillars[i].update();
@@ -131,4 +152,3 @@ if(localStorage.maxScore == undefined)
     localStorage.maxScore = 0;
 
 
-window.setInterval(mainUpdate, 100);
