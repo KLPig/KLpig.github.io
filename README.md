@@ -26,6 +26,20 @@ The you can visit these *tools* and *games* as `secret/`, there're two ways to v
 | [Countdown](https://klpig.github.io/secrets/countdown.html) | COUNTDOWN | Simple online countdown
 | [Flappy bird](https://klpig.github.io/secrets/flappy_bird/) | BIRD | An animated flappy bird game
 
+## Just updated
+
+Did you just thought I was a **NOOB** who just gave you the link?
+
+Mwahahhahaha!!!!
+
+> In 18\:22\:22 1/2/24, I did a update!
+>
+> You have to login to watch the pages!!!
+>
+> HAHAHAHAHAHAHA!
+
+***
+
 ## Finally
 
 Finally it's **THE END**.
