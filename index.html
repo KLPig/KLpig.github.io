@@ -8,6 +8,7 @@
 </head>
 <body style="margin:0px;padding: 0px; background-image:url(bg.png);background-size: cover;">
     <script>
+        localStorage.login = undefined
         function SetText(id, text)
         {
             element = document.getElementById(id)
@@ -19,9 +20,11 @@
             if(element.value == 'KLpig123'){
                 window.open('admin.html', '_self', '', true)
                 SetText('Notice', '')
+                localStorage.login = 'admin'
             }else if(element.value == '1145114'){
                 window.open('welcome.html', '_self', '', true)
                 SetText('Notice', '')
+                localStorage.login = 'guest'
             }else{
                 SetText('Notice', 'Password Incorrect')
             }
