@@ -1,7 +1,7 @@
 function handle_code(){
     element = document.getElementById('code')
     if(element.value =='HOME')
-        url = 'https://klpig.github.io/welcome.html'
+        url = 'https://klpig.github.io/secret/'
     else if(element.value == 'BAD-TOM')
         url = 'https://klpig.github.io/secrets/bad_tom.html'
     else if(element.value == 'GOOD-THING')
