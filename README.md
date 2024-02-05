@@ -18,13 +18,13 @@ The you can visit these *tools* and *games* as `secret/`, there're two ways to v
 
 | Name | Code | Description
 | :--: | :--: | :---------:
-| [Noob Rickroller](https://klpig.github.io/secrets/never_gonna_give_you_up.html) | GOOD-THING | Free rickrolls for noob
-| [KL is a noob](https://klpig.github.io/secrets/secret_show.html) | SPECIAL-SECRET | The greatest way to show KL is a noob
-| [Bad Tom Simulator](https://klpig.github.io/secrets/bad_tom.html) | BAD-TOM | from `jcw87`'s project
-| [Undertale Last Breath](https://klpig.github.io/downloads/ulb.png) | ULB | The great **U** **L**e **B**i sans
-| [弱智吧](https://klpig.github.io/secrets/rzb.html) | RZB | 依託答辯
-| [Countdown](https://klpig.github.io/secrets/countdown.html) | COUNTDOWN | Simple online countdown
-| [Flappy bird](https://klpig.github.io/secrets/flappy_bird/) | BIRD | An animated flappy bird game
+| [Noob Rickroller](https://klpig.github.io/secret/secrets/never_gonna_give_you_up.html) | GOOD-THING | Free rickrolls for noob
+| [KL is a noob](https://klpig.github.io/secret/secrets/secret_show.html) | SPECIAL-SECRET | The greatest way to show KL is a noob
+| [Bad Tom Simulator](https://klpig.github.io/secret/secrets/bad_tom.html) | BAD-TOM | from `jcw87`'s project
+| [Undertale Last Breath](https://klpig.github.io/secret/downloads/ulb.png) | ULB | The great **U** **L**e **B**i sans
+| [弱智吧](https://klpig.github.io/secret/secrets/rzb.html) | RZB | 依託答辯
+| [Countdown](https://klpig.github.io/secret/secrets/countdown.html) | COUNTDOWN | Simple online countdown
+| [Flappy bird](https://klpig.github.io/secret/secrets/flappy_bird/) | BIRD | An animated flappy bird game
 
 ## Just updated
 
