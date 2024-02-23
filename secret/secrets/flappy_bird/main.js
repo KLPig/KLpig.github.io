@@ -25,7 +25,7 @@ class Bird{
         document.getElementById('bird').style.rotate = this.min(this.g * 8, 45) - 25 + 'deg'
         this.g += 1;
         this.y += this.intdiv(this.g, 3) + 1;
-        document.getElementById('bird').style.gridArea = this.y + ' / 6 / span 1 / span 1'
+        document.getElementById('bird').style.gridArea = this.y + ' / 6 / span 4 / span 5'
     }
     up(){
         if(gameStart == 0) {
