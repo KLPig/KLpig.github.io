@@ -3,12 +3,12 @@ if(localStorage.login == undefined)
 function updatefullscreen(){
     if(localStorage.fullscreen == 'true'){
         document.getElementById('main').className = 'fullscreen'
-        document.getElementById('title').style.position = 'fixed'
-        document.getElementById('title').style.height = '10%'
+        document.getElementById('menu').className = 'fullscreen'
+        document.getElementById('title').style.position = 'static'
     }else{
         document.getElementById('main').className = undefined
+        document.getElementById('menu').className = undefined
         document.getElementById('title').style.position = 'sticky'
-        document.getElementById('title').style.height = '80px'
     }
 }
 setInterval(updatefullscreen, 10)
