@@ -17,7 +17,7 @@ function handle_code(){
     else if(element.value == 'BIRD')
         url = 'https://klpig.github.io/secret/secrets/flappy_bird'
     else
-        url = 'https://klpig.github.io'
+        return
     openWindow(url);
 }
 

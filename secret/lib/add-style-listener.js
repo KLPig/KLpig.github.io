@@ -11,8 +11,8 @@ document.getElementById('menu').addEventListener(
     'mouseleave',
     function(){
         if(window.innerWidth > 600){
-            document.getElementById('menu').style.width = '5%';
-            document.getElementById('main').style.width = '95%';
+            document.getElementById('menu').style.width = '15%';
+            document.getElementById('main').style.width = '85%';
         }
     }
 )
