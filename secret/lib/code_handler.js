@@ -16,6 +16,10 @@ function handle_code(){
         url = 'https://klpig.github.io/secret/secrets/countdown.html'
     else if(element.value == 'BIRD')
         url = 'https://klpig.github.io/secret/secrets/flappy_bird'
+    else if(element.value == 'SCPO502')
+        url = 'https://klpig.github.io/secret/secrets/scpo502.html'
+    else if(element.value == 'BROWSER')
+        url = 'https://klpig.github.io/secret/secrets/browser'
     else
         return
     openWindow(url);
