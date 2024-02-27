@@ -26,9 +26,17 @@
                     window.open('https://klpig.github.io/secret/', '_self', '', true)
                     SetText('Notice', '')
                     localStorage.login = 'guest'
+                }else{
+                    SetText('Notice', 'Password Incorrect')
                 }
             }else{
-                SetText('Notice', 'Password Incorrect')
+                if(element.value == 'klnb'){
+                    window.open('https://klpig.github.io/document/documents/template.html', '_self', '', true)
+                    SetText('Notice', '')
+                    localStorage.login = 'document-guest'
+                }else{
+                    SetText('Notice', 'Password Incorrect')
+                }
             }
         }
     </script>

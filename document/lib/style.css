@@ -1,0 +1,59 @@
+body
+{
+    margin: 0px;
+}
+#header-image
+{
+    align-self: stretch;
+    width: 100svw;
+    height: 200px;
+}
+#container
+{
+    font-family: fantasy;
+    display: block;
+    width: 100svw;
+    margin: 0px;
+}
+#header
+{
+    background-color: #d0f0f0;
+    display: flex;
+    align-items: stretch;
+    margin: 0px;
+    border: 5px #508080 solid;
+    border-bottom: 10px #d0f0f0 solid;
+    color: #508080;
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+#header-title
+{
+    font-size: x-large;
+    margin: 0px;
+    display: flex;
+    width: 40svw;
+    color: #d0f0f0;
+    background-color: #508080;
+    align-items: center;
+}
+.header-button
+{
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes header-button-selected
+{
+    from{background-color: #d0f0f0; color: #508080;}
+    to{background-color: #c0e0e0; color: #508080;}
+}
+.header-button:hover
+{
+    animation: header-button-selected 0.8s;
+    background-color: #c0e0e0;
+}
