@@ -6,14 +6,17 @@ title.id = 'header-title'
 
 header.appendChild(title)
 
+buttons = document.createElement('div')
+buttons.id = 'header-buttons'
+
 homeButton = document.createElement('div')
 homeButton.innerHTML = 'HOME'
 homeButton.className = 'header-button'
 
 homeButton.addEventListener(
-    'onclick',
+    'click',
     function(){
-        window.open('../document/template.html', '_self')
+        window.open('../klpig/', '_self')
     }
 )
 contentButton = document.createElement('div')
@@ -21,8 +24,9 @@ contentButton.innerHTML = 'CONTENT'
 contentButton.className = 'header-button'
 
 contentButton.addEventListener(
-    'onclick',
+    'click',
     function(){
+        alert('The content aren\'t well developed now.')
     }
 )
 
@@ -31,13 +35,15 @@ backButton.innerHTML = 'BACK'
 backButton.className = 'header-button'
 
 backButton.addEventListener(
-    'onclick',
+    'click',
     function(){
         window.open('../../index.html', '_self')
     }
 )
 
 
-header.appendChild(homeButton)
-header.appendChild(contentButton)
-header.appendChild(backButton)
+buttons.appendChild(homeButton)
+buttons.appendChild(contentButton)
+buttons.appendChild(backButton)
+
+header.appendChild(buttons)
