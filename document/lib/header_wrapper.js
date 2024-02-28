@@ -13,7 +13,16 @@ homeButton.className = 'header-button'
 homeButton.addEventListener(
     'onclick',
     function(){
-        return
+        window.open('../document/template.html', '_self')
+    }
+)
+contentButton = document.createElement('div')
+contentButton.innerHTML = 'CONTENT'
+contentButton.className = 'header-button'
+
+contentButton.addEventListener(
+    'onclick',
+    function(){
     }
 )
 
@@ -24,9 +33,11 @@ backButton.className = 'header-button'
 backButton.addEventListener(
     'onclick',
     function(){
-        return
+        window.open('../../index.html', '_self')
     }
 )
 
+
 header.appendChild(homeButton)
+header.appendChild(contentButton)
 header.appendChild(backButton)

@@ -1,12 +1,14 @@
 body
 {
     margin: 0px;
+    background-color: #d0f0f0;
 }
 #header-image
 {
     align-self: stretch;
+    align-items: center;
     width: 100svw;
-    height: 200px;
+    margin: 0px;
 }
 #container
 {
@@ -41,11 +43,12 @@ body
 }
 .header-button
 {
-    align-self: stretch;
     display: flex;
+    float: left;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
+    text-align: center;
+    margin: auto;
 }
 @keyframes header-button-selected
 {
@@ -56,4 +59,28 @@ body
 {
     animation: header-button-selected 0.8s;
     background-color: #c0e0e0;
+}
+
+@media screen and (max-width: 400px)
+{
+    #header{
+        display: block;
+        height: 100px;
+    }
+    .header-button{
+        width: 33.33%;
+        height: 60%;
+    }
+    #header-title{
+        width: 100%;
+        height: 40%;
+    }
+}
+
+#document
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #efffff;
+    
 }
