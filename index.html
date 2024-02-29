@@ -98,6 +98,7 @@
         {
             height: 0px;
             visibility: hidden;
+            position: relative;
         }
         .dropdown_item:hover, #dropdown:hover
         {
@@ -116,6 +117,7 @@
                 e[i].style.visibility = 'hidden'
             }
         }
+        sessionStorage.drop = 'false'
     </script>
     <div id="container">
         <div id="login" onmousemove="
@@ -131,18 +133,24 @@
             <b class="logintext">man.</b>
             <br>
             <p>Login as..</p>
-            <div id="select_dropdown" onmouseover="
-            e = document.getElementsByClassName('dropdown_item')
-            for(var i = 0; i < 2; i++){
-                e[i].style.height = '40px';
-                e[i].style.visibility = 'visible'
-            }
-            " onmouseleave="CloseSelector()">
+            <div id="select_dropdown" onclick="
+                if(sessionStorage.drop == 'false'){
+                    e = document.getElementsByClassName('dropdown_item')
+                    for(var i = 0; i < 2; i++){
+                        e[i].style.height = '40px';
+                        e[i].style.visibility = 'visible'
+                    }
+                    sessionStorage.drop = 'true'
+                }else{
+                    CloseSelector()
+                    sessionStorage.drop = 'false'
+                }
+
+            ">
                 <p id="dropdown">Secrets</p>
                 <p class="dropdown_item" onclick="document.getElementById('dropdown').innerHTML = 'Secrets';CloseSelector()">Secrets</p>
                 <p class="dropdown_item" onclick="document.getElementById('dropdown').innerHTML = 'Document';CloseSelector()">Documents</p>
             </div>
-            <br><br>
             <p class="logintext" style="font-size:large">Password:</p>
             <input class="logintext" type="password" id="pwd" placeholder="Password...">
             <br>
