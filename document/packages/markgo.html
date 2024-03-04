@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kun Quotes</title>
+        <link rel="stylesheet" href="../lib/style.css"></link>
+    </head>
+    <body>
+        <div id="container">
+            <img src="../sky.png" id="header-image">
+            <div id="header"></div>
+            <div id="document">
+                <div class="subtitle">MarkGo</div>
+                <div class="subblock">
+                    A lanuage for <b>mark</b> and <b>go</b> by kl.
+                </div>
+                <div class="subblock">
+                    Mark Go is a lanugage that can be able to use markups and 
+                    make simply calculations.
+                    <br>
+                    The compiler is based on `python` where is compiles 
+                    source code into `html` docs.
+                    <br>
+                    The idle <p class="hidden">will be</p> 
+                    powered by 
+                    <b onclick="window.open('https://www.pygame.org')">pygame</b>.
+                </div>
+                <div class="subtitle" id="resources">Resources</div>
+                <div class="subblock">
+                    <a href="https://github.com/KLPig/klpig.web.markgo">Main github page</a><br>
+                    <a href="https://github.com/KLPig/klpig.web.markgo/releases">Releases</a><br>
+                    <a href="https://github.com/KLPig/klpig.web.markgo/releases/tag/Alpha1.1">Newest Release - MarkGo Testing - alpha 1.1</a>
+                </div>
+                <div class="subtitle" id="reference">Reference</div>
+                <div class="subtitle" id="r1">General</div>
+                <div class="subblock">
+                    When you write a <code>MarkGo</code> program, you 
+                    must write this code:
+                    <pre>LANGUAGE MARKGO</pre>
+                    And add a statement<span class="hidden"> ; </span>
+                    at the end of every non-first line.
+                </div>
+                <div class="subblock">
+                    The program will skip everything in '', e.g:
+                    <pre>'Hello, hello, hello'</pre>
+                </div>
+                <div class="subtitle" id="r1">! Sign</div>
+                <div class="subblock">
+                    Use <code>!</code> to visit root elements.
+                    <h2>!HEAD</h2>
+                    !HEAD is an element to include external files and 
+                    set general datas.<br>
+                    <pre>!HEAD.set.title:"Hello"</pre>
+                    The above code set the document title into "Hello".<br>
+                    Of course, it allows <a href="r2">?</a> sign.
+                    Import <code>css</code> and <code>js</code> files like this: 
+                    <pre>!HEAD.import.js:"test.js"</pre>
+                    <pre>!HEAD.import.css:"test.css"</pre>
+                </div>
+                <div class="subtitle" id="r2">? Sign</div>
+                <div class="subblock">
+                    Use <code>?</code> to visit variables
+                    <span class="hidden">, you have to use <a href="r3">
+                        #CREATE</a> first</span>.
+                    Use <code>=</code> to give the variable a value, e.g:
+                    <pre>
+#CREATE.p;
+?p = <span><</span>NEW-ELEMENT p>;
+                    </pre>
+                    Use <span><</span>NEW-ELEMENT <input type="text" id="ite">> to 
+                    make a element like <<span id="ipe1"></span><span>>
+                        <</span><span>/</span><span id="ipe2"></span>>
+                    <script>
+                        document.getElementById('ite').addEventListener(
+                            'input',
+                            function(){
+                                document.getElementById('ipe1').innerHTML = document.getElementById('ite').value;
+                                document.getElementById('ipe2').innerHTML = document.getElementById('ite').value;
+                            }
+                        )
+                    </script>
+                    And use <code>+</code> to append a value, e.g:
+                    <pre>
+#CREATE.p;
+?p = <span><</span>NEW-ELEMENT p>;
+?p + "Hello".
+                    </pre>
+                    The program added the text "Hello" into the element, 
+                    you can add another element into it too.
+                </div>
+                <div class="subtitle" id="r3"># Sign</div>
+                <div class="subblock">
+                    # was used to execute functions, e.g:
+                    <pre>#CREATE.var</pre>
+                    The program creates a variable called var.
+                </div>
+                <div class="subtitle" id="r4">@ Sign</div>
+                <div class="subblock">
+                    Still developing.
+                </div>
+            </div>
+            <div id="footer"></div>
+        </div>
+        <script src="../lib/header_wrapper.js"></script>
+        <script src="../lib/footer_wrapper.js"></script>
+    </body>
+</html>
