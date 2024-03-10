@@ -4,160 +4,21 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="icon.png">
     <title>KL website</title>
-    <link rel="stylesheet" type="text/css" href="secret/lib/anchor-style.css">
+    <link rel="stylesheet" href="./lib/style.css">
 </head>
-<body style="margin:0px;padding: 0px; background-image:url(bg.png);background-size: cover;">
-    <script>
-        localStorage.login = undefined
-        function SetText(id, text)
-        {
-            element = document.getElementById(id)
-            element.innerHTML = text
-        }
-        function HandlePassword()
-        {
-            element = document.getElementById('pwd')
-            if(document.getElementById('dropdown').innerHTML=='Secrets'){
-                if(element.value == 'KLpig123'){
-                    window.open('admin.html', '_self', '', true)
-                    SetText('Notice', '')
-                    localStorage.login = 'admin'
-                }else if(element.value == '1145114'){
-                    window.open('https://klpig.github.io/secret/', '_self', '', true)
-                    SetText('Notice', '')
-                    localStorage.login = 'guest'
-                }else{
-                    SetText('Notice', 'Password Incorrect')
-                }
-            }else{
-                if(element.value == 'klnb'){
-                    window.open('https://klpig.github.io/document/klpig/', '_self', '', true)
-                    SetText('Notice', '')
-                    localStorage.login = 'document-guest'
-                }else{
-                    SetText('Notice', 'Password Incorrect')
-                }
-            }
-        }
-    </script>
-    <style>
-        @keyframes toggle{
-            0%  {opacity: 0;width:20%;height: 700px}
-            70% {opacity: 0.2;width:100%;height: 700px}
-            90% {opacity: 1;width:100%;height: 800px}
-            100%{opacity: 1;width:100%;height: 800px}
-        }
-        @keyframes bgtoggle{
-            from{background-size: 100%;}
-            to{background-size: 120%;}
-        }
-        #login
-        {
-            color:darkslategray;
-            font-family:papyrus;
-            font-size: x-large;
-            text-align: center;
-            height: 800px;
-            align-items: center;
-            width:100%;
-            border: darkslategray 5px solid;
-            background-color: lightcyan;
-            opacity: 0;
-            margin: 0px;
-            padding: 0px;
-        }
-        #select_dropdown
-        {
-            width: 240px;
-            height: 40px;
-            border-radius: 4px;
-            border-width: 0px;
-            background-color: rgb(21, 128, 128);
-            padding: 0px;
-            align-self: center;
-            display: block;
-            margin: 0px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .dropdown:hover
-        {
-            background-color: rgb(28, 104, 104);
-        }
-        .dropdown_item, #dropdown
-        {
-            margin: 0px;
-            padding: 0px;
-            border: 2px solid darkslategray;
-            height: 40px;
-            color: darkslategray;
-            background-color: rgb(21, 128, 128);
-            background-color: lightcyan;
-        }
-        .dropdown_item
-        {
-            height: 0px;
-            visibility: hidden;
-            position: relative;
-        }
-        .dropdown_item:hover, #dropdown:hover
-        {
-            background-color: rgb(200, 249, 249);
-        }
-    </style>
-    <script>
-        function Toggle(){
-            document.getElementById('login').animation = 'toggle';
-            document.getElementsByTagName('body')[0].animation = 'bgtoggle';
-        }
-        function CloseSelector(){
-            e = document.getElementsByClassName('dropdown_item')
-            for(var i = 0; i < 2; i++){
-                e[i].style.height = '0px';
-                e[i].style.visibility = 'hidden'
-            }
-        }
-        sessionStorage.drop = 'false'
-    </script>
-    <div id="container">
-        <div id="login" onmousemove="
-        document.getElementsByTagName('body')[0].style.animation = 'bgtoggle 5s';
-        document.getElementById('login').style.animation = 'toggle 5s';
-        setTimeout(function(){
-            document.getElementById('login').style.opacity=1;
-        }, 5000)">
-            <h1 class="logintext">KL</h1>
-            <b class="logintext" id="adj" onmouseover="SetText('adj', 'A smart')"
-            onmouseleave="SetText('adj', 'An idk')"
-            onmousedown="SetText('adj', 'An intelligent')">An idk</b>
-            <b class="logintext">man.</b>
-            <br>
-            <p>Login as..</p>
-            <div id="select_dropdown" onclick="
-                if(sessionStorage.drop == 'false'){
-                    e = document.getElementsByClassName('dropdown_item')
-                    for(var i = 0; i < 2; i++){
-                        e[i].style.height = '40px';
-                        e[i].style.visibility = 'visible'
-                    }
-                    sessionStorage.drop = 'true'
-                }else{
-                    CloseSelector()
-                    sessionStorage.drop = 'false'
-                }
-
-            ">
-                <p id="dropdown">Secrets</p>
-                <p class="dropdown_item" onclick="document.getElementById('dropdown').innerHTML = 'Secrets';CloseSelector()">Secrets</p>
-                <p class="dropdown_item" onclick="document.getElementById('dropdown').innerHTML = 'Document';CloseSelector()">Documents</p>
-            </div>
-            <p class="logintext" style="font-size:large">Password:</p>
-            <input class="logintext" type="password" id="pwd" placeholder="Password...">
-            <br>
-            <button class="logintext" onclick="HandlePassword()" style="font-family:papyrus">OK</button>
-            <p id="Notice" style="color:red;font-family:papyrus"></p>
-        </div>
+<body>
+    <img src="bg.png" id="bg">
+    <div id="login">
+        <h1 class="login-element">KL website</h1>
+        <p class="login-element">Copyleft (c) klpig213 2024 - 4202</p>
+        <h2 class="login-element">Username</h2>
+        <input class="login-element" type="text" name="username" id="usr">
+        <h2 class="login-element">Login Code</h2>
+        <input class="login-element" type="text" id="code" disabled>
+        <h2 class="login-element">Password</h2>
+        <input class="login-element" type="password" name="password" id="pwd" disabled>
+        <input class="login-element" type="button" value="Login..." id="btn" disabled>
     </div>
-
+    <script src="./lib/events.js"></script>
 </body>
 </html>

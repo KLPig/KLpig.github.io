@@ -1,0 +1,84 @@
+@keyframes bg-toggle {
+    from{transform: scale(1);}
+    to  {transform: scale(1.5);}
+}
+@keyframes login-toggle {
+    from{opacity: 0;height: 20svh;top: 40svh;}
+    50% {opacity: 0.3;height: 30svh;top: 10svh;}
+    100%{opacity: 0.5; height: 100svh; top:0svh;}
+}
+@keyframes login-element-toggle{
+    from{margin-top: 500px;opacity: 0.5;}
+    to  {margin-top: 30px;  opacity: 1;}
+}
+@keyframes input-focus{
+    from{width:40svw;border-style: outset;}
+    to  {width:70svw;border-style: inset;}
+}
+#bg
+{
+    position: fixed;
+    transform: scale(1);
+    top: 0px;
+    left: 0px;
+    width: 100svw;
+    height: 100svh;
+}
+#bg.toggle
+{
+    animation: bg-toggle 1s;
+    transform: scale(1.5);
+}
+#login
+{
+    position: fixed;
+    top: 40svh;
+    left: 10svw;
+    width: 80svw;
+    height: 20svh;
+    margin: 0px;
+    opacity: 0;
+    border: #2bc1c1 5px inset;
+    background-color: #07f9c8;
+    text-align: center;
+    overflow: auto;
+    font-family: monospace;
+}
+#login.toggle
+{
+    top: 0svh;
+    height: 100svh;
+    opacity: 0.5;
+    animation: login-toggle 1s;
+    font-size: x-large;
+}
+input
+{
+    width: 40svw;
+    height: 5svw;
+    background-color: #f0f8ff;
+    border: #d0d8df outset 5px;
+    font-family: monospace;
+    text-align: center;
+}
+input:disabled
+{
+    background-color: #e0e0ef;
+}
+input:focus-within
+{
+    animation: input-focus 0.5s;
+    width: 70svw;
+    border-style: inset;
+}
+.login-element
+{
+    visibility: hidden;
+}
+.login-element-toggle
+{
+    visibility: visible;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
