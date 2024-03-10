@@ -12,7 +12,7 @@
     to  {margin-top: 30px;  opacity: 1;}
 }
 @keyframes input-focus{
-    from{width:40svw;border-style: outset;}
+    from{width:min(40svw, 400px);border-style: outset;}
     to  {width:70svw;border-style: inset;}
 }
 #bg
@@ -54,16 +54,20 @@
 }
 input
 {
-    width: 40svw;
-    height: 5svw;
+    padding: 0px;
+    width: min(40svw, 400px);
+    height: 40px;
     background-color: #f0f8ff;
     border: #d0d8df outset 5px;
     font-family: monospace;
     text-align: center;
+    box-sizing: content-box;
+    display: block;
 }
 input:disabled
 {
-    background-color: #e0e0ef;
+    background-color: #d0d0df;
+    color:black;
 }
 input:focus-within
 {
