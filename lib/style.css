@@ -15,6 +15,10 @@
     from{width:min(40svw, 400px);border-style: outset;}
     to  {width:70svw;border-style: inset;}
 }
+@keyframes login-leave {
+    from{display: block; opacity: 1; margin-top: 30px;}
+    to  {display: block; opacity: 0; margin-top: 500px;}
+}
 #bg
 {
     position: fixed;
@@ -85,4 +89,9 @@ input:focus-within
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+.login-element-leave
+{   
+    animation: login-leave 0.5s;
+    display: none;
 }

@@ -9,14 +9,10 @@ arr.addEventListener(
     function(){
         if(!state){
             arr.className = 'out'
-            arr.innerHTML = '>'
             menu.className = 'out'
-            setTimeout(function(){arr.innerHTML = '<'}, 1000)
         }else{
             arr.className = 'in'
-            arr.innerHTML = '<'
             menu.className = 'in'
-            setTimeout(function(){arr.innerHTML = '>'}, 1000)
         }
         state = !state;
     }
