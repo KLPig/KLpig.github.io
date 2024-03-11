@@ -24,6 +24,11 @@ arr.addEventListener(
 
 localStorage.site = 'secrets/empty.html'
 
+
+if(sessionStorage.GETsite != undefined){
+    localStorage.site = sessionStorage.GETsite
+}
+
 setInterval(
     function(){
         scr = document.getElementById('main').childNodes[0]
