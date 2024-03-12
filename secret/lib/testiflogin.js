@@ -3,5 +3,5 @@ var nt = Number(date.getFullYear()) * 7 + Number(date.getMonth()) * 11 + Number(
 
 if(localStorage.login == undefined)
     window.open('https://klpig.github.io/secret/lib/notlogin', '_self')
-else if(Number(localStorage.login) != nt)
+else if(Number(localStorage.login) != nt && !(usrname.value == 'klpig' || usrname.value == 'visitor213'))
     window.open('https://klpig.github.io/secret/lib/notlogin', '_self')
